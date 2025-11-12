@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: movie-userbot
+    env: python
+    repo: https://github.com/sparkox1/Moviebot
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python movie_userbot.py
+    envVars:
+      - key: API_ID
+        value: "36057028"
+      - key: API_HASH
+        value: "3ffb94f0e93da47f1a98123d0b77c3ff"
+      - key: SESSION_STRING
+        value: "BQFNtIsANwzAN72uMDmR61FdXvuVy1XWjBoRuleua0Nb-BskYUxVF6prrTqizTNS_Dk341whK55bbfHiS3A12Y4BOp8die8SjZx7_iXR7xug6uGd0IyE8YjZ5YouC1HQZqZno1F4DQ7tCHZn0K7jbi9030lBiEptgAf9ZwhGOw5EApe-AXaPIvfKbqMTVHuiQ3g6KwisfvNOFh5TW-ivXiS9y8Lf_jFwkOhrBKa8gEV0DkSTN-AzsCDiujJFXGZjS3dwS9FsVnKl2unWY2nz3E1KJJlWTY5bXNYqy9ep8wkn1JwnsbnYpahHOLIzYBY4_yCYusNAHgKFBytoA8FoPcuDVvPP7wAAAAH5KUgGAA"
+      - key: TARGET_BOT
+        value: "@iPapkornD2bot"
